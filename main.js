@@ -16,26 +16,27 @@ fav[2] = "Star Wars: The Force Awakens"
 fav[3] = "The Bourne Identity"
 fav[4] = "The Dark Knight"
 
-leastfav = []
-fav[0] = "The Star Wars Holiday Special"
-fav[1] = "Army of Darkness"
-fav[2] = "Starship Troopers"
-fav[3] = "Kazaam"
-fav[4] = "Star Wars: Episode II - Attack of the Clones"
+worst = []
+worst[0] = "The Star Wars Holiday Special"
+worst[1] = "Army of Darkness"
+worst[2] = "Starship Troopers"
+worst[3] = "Kazaam"
+worst[4] = "Star Wars: Episode II - Attack of the Clones"
+
+fav.sort()
+worst.sort()
 
 
 
 
 
-
-
-console.log(favs)
+console.log(fav)
 film_list = document.querySelector("#starwars ul")
 
 fetch("http://swapi.co/api/films/")
 .then( response => response.json()).then(data => console.log( data.results ))
 
-fetch("http://swapi.co/api/films/").then(
+x = fetch("http://swapi.co/api/films/").then(
   response => response.json()
 ).then(
   data => data.results.forEach(
